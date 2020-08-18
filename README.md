@@ -1,9 +1,14 @@
-# Laradock's PHP-FPM Base Image
+# Expocker's PHP-FPM
 
-[![Build Status](https://travis-ci.org/laradock/php-fpm.svg?branch=master)](https://travis-ci.org/laradock/php-fpm)
+[![Build Status](https://travis-ci.org/expocker/php-fpm.svg?branch=master)](https://travis-ci.org/expocker/php-fpm)
 
-[Contribution Guide](http://laradock.io/contributing/#edit-base-image).
 
-[Workspace Docker Hub Repository](https://hub.docker.com/r/laradock/php-fpm/)
+## Workspace
 
-[Laradock Github Repository](https://github.com/Laradock/laradock).
+[GitHub repository](https://github.com/Expocker/workspace)
+
+[Docker Hub repository](https://hub.docker.com/r/expocker/workspace)
+
+## Expocker
+
+[Expocker GitHub repository](https://github.com/Expocker/expocker)
