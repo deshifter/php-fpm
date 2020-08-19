@@ -2,13 +2,14 @@
 
 [![Build Status](https://travis-ci.org/expocker/php-fpm.svg?branch=master)](https://travis-ci.org/expocker/php-fpm)
 
+[Docker Hub repository](https://hub.docker.com/repository/docker/expocker/php-fpm)
 
-## Workspace
+## Expocker's Workspace
 
 [GitHub repository](https://github.com/Expocker/workspace)
 
-[Docker Hub repository](https://hub.docker.com/r/expocker/workspace)
+[Docker Hub repository](https://hub.docker.com/repository/docker/expocker/workspace)
 
 ## Expocker
 
-[Expocker GitHub repository](https://github.com/Expocker/expocker)
+[GitHub repository](https://github.com/Expocker/expocker)
