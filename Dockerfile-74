@@ -12,10 +12,10 @@ FROM phusion/baseimage:bionic-1.0.0
 LABEL maintainer="Artem Fufaldin <artem.fufaldin@gmail.com>"
 
 # Set Environment Variables
-ENV DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install Laravel requirements
-RUN set -xe; \
+RUN set -xe \
     echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu $(lsb_release -cs) main" | tee -a /etc/apt/sources.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C && \
     apt-get update && \
@@ -23,13 +23,12 @@ RUN set -xe; \
     apt-get -o DPkg::options::="--force-confold" -y install \
         php7.4-fpm \
         php7.4-bcmath \
-        php7.4-xml \
-        php7.4-mbstring
+        php7.4-mbstring \
+        php7.4-xml
 
 # Composer
-COPY ./install_composer.sh /root/install_composer.sh
-RUN . /root/install_composer.sh && \
-   rm /root/install_composer.sh
+COPY install_composer.sh /tmp
+RUN . /tmp/install_composer.sh
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
