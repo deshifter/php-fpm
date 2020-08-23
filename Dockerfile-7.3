@@ -15,7 +15,7 @@ LABEL maintainer="Artem Fufaldin <artem.fufaldin@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install Laravel requirements
-RUN set -xe \
+RUN set -xe; \
     echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu $(lsb_release -cs) main" | tee -a /etc/apt/sources.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C && \
     apt-get update && \
