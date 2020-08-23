@@ -18,11 +18,11 @@ ENV DEBIAN_FRONTEND noninteractive
 #
 #
 
-RUN set -eux \
-    apt-get update \
-    apt-get upgrade -y \
+RUN set -eux; \
+    apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
-            apt-utils \
+            apt-utils && \
     pecl channel-update pecl.php.net && \
     # Install the PHP bcmath library
     docker-php-ext-install bcmath && \
