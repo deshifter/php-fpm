@@ -1,0 +1,29 @@
+#
+#--------------------------------------------------------------------------
+# Image Setup
+#--------------------------------------------------------------------------
+#
+
+FROM php:7.3-fpm
+
+LABEL maintainer="Artem Fufaldin <artem.fufaldin@gmail.com>"
+
+# Set Environment Variables
+ENV DEBIAN_FRONTEND noninteractive
+
+#
+#--------------------------------------------------------------------------
+# Software's Installation
+#--------------------------------------------------------------------------
+#
+#
+
+RUN set -eux \
+    apt-get update \
+    apt-get upgrade -y \
+    apt-get install -y --no-install-recommends \
+            apt-utils \
+    pecl channel-update pecl.php.net && \
+    # Install the PHP bcmath library
+    docker-php-ext-install bcmath && \
+    rm -rf /var/lib/apt/lists/*
