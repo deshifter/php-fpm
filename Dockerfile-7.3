@@ -20,11 +20,7 @@ RUN set -xe; \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C && \
     apt-get update && \
     apt-get -o DPkg::options::="--force-confold" -y upgrade && \
-    apt-get -o DPkg::options::="--force-confold" -y install \
-        php7.4-fpm \
-        php7.4-bcmath \
-        php7.4-mbstring \
-        php7.4-xml
+    apt-get -y install php7.3-fpm php7.3-mbstring
 
 # Composer
 COPY install_composer.sh /tmp
